@@ -34,7 +34,10 @@ class Footer extends React.Component{
         {
           this.props.data.map((ele,index)=>{
             return <li key={index} >
-              <a className={this.props.active==index?"active":""}>{ele}</a>
+              <a className={this.props.active==index?"active":""}>
+                <i className={"iconfont "+ele.className}></i>
+                <p>{ele.name}</p>
+              </a>
             </li>
           })
         }
@@ -42,7 +45,10 @@ class Footer extends React.Component{
   }
 }
 Footer.defaultProps={
-  "data":["推荐","发现","商城","食话","我的"],
-  "active":0
+  "data":[{"name":"推荐","className":"icon-daohangguogai"},
+  {"name":"发现","className":"icon-icon1"},
+  {"name":"商城","className":"icon-shangdian"},
+  {"name":"食话","className":"icon-yinliao"},
+  {"name":"我的","className":"icon-shoutaoxian"}]
 }
 export {Header,Content,Footer}

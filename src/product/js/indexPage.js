@@ -14,7 +14,9 @@ class IndexPage extends React.Component {
     }
     render() {
         return <div id = "indexPage" >
-          <Header left="+" mid={<input type="text" className="search" placeholder="搜索你感情兴趣的"/>} right="email"/>
+          <Header left={<i className='iconfont icon-jiahao'></i>}
+          mid={<div className="searchBox"><input type="text" className="search" placeholder="搜索你感情兴趣的"/><i className='iconfont icon-sousuo_sousuo searchIcon'></i></div>}
+          right={<i className='iconfont icon-youxiang'></i>}/>
           <Content>
               <ul className="shopList">
                   <li className="shopItem">
